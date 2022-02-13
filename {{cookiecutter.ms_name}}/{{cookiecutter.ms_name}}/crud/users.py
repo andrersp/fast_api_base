@@ -117,37 +117,16 @@ async def select_user(user_id: int, session: AsyncSession):
     return _serialize_user(user) if user else False
 
 
-async def change_status(user_id: int, register_id: int):
-
-    async with async_session() as session:
-        query = select(ModelUser).where(
-            and_(ModelUser.cg_id == register_id, ModelUser.id == user_id)
-        )
-
-        user = await session.execute(query)
-        user = user.scalar()
-
-        if user:
-
-            user.enable = False if user.enable else True
-            session.add(user)
-            await session.commit()
-            await session.refresh(user)
-            return user
-
-    return False
-
-
 def _serialize_users(users: List[ModelUser]):
 
     return list(
         map(
             lambda x: {
                 "id": x.id,
-                "username": x.username,
+                "name": x.name,
                 "email": x.email,
                 "enable": x.enable,
-                "rule": {"id": x.rule.id, "name": x.rule.name} if x.rule_id else False,
+                "rule": x.rule.name if x.rule_id else False,
             },
             users,
         )
@@ -158,6 +137,7 @@ def _serialize_user(user):
 
     return {
         "id": user.id,
+        "name": user.name,
         "username": user.username,
         "email": user.email,
         "enable": user.enable,
