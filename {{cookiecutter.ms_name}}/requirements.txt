@@ -1,0 +1,16 @@
+fastapi==0.70.0
+uvicorn[standard]==0.15.0
+python-dotenv==0.14.0
+gunicorn
+pydantic
+asyncpg==0.24.0
+sqlmodel
+python-multipart
+python-jose
+passlib[bcrypt]
+pydantic[email]
+fastapi_permissions
+aiosqlite # for test 
+pytest #for teste
+requests # for test
+pytest_asyncio # for test

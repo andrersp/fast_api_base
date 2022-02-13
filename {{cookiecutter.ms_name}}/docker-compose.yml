@@ -1,0 +1,41 @@
+version: "3"
+
+services:
+  
+  db:
+    image: postgres:9.6-alpine
+    volumes:
+      - {{cookiecutter.ms_name}}_data:/var/lib/postgresql/data/
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+    environment:
+      - POSTGRES_USER={{cookiecutter.ms_name}}
+      - POSTGRES_PASSWORD={{cookiecutter.ms_name}}
+    networks:
+      - database_network
+  
+  api:
+    build:
+      context: .
+      dockerfile: ./dockerfiles/Dockerfile.dev
+
+    restart: always
+    volumes:
+      - .:/app    
+    networks:
+      - net_api
+      - database_network 
+    ports:
+      - 8000:8000
+    env_file: .env
+    depends_on:
+      - db 
+  
+
+networks:
+  net_api:
+  database_network:  
+volumes:
+  {{cookiecutter.ms_name}}_data:
+
+  

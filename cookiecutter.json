@@ -1,0 +1,8 @@
+{
+    "project_name": "Example",
+    "ms_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "_copy_without_render": [
+        "__init__.py",
+        "app.py"
+    ]
+}
