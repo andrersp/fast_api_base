@@ -13,10 +13,10 @@
     <a href="https://github.com/andrersp/" target="_blank">
         <img src="https://img.shields.io/static/v1?label=Author&message=RSPANDRE&color=00ba6d&style=for-the-badge&logo=LinkedIn" alt="Author: RSPANDRE">
     </a>
-    <a href="#">
+    <a href="https://www.python.org/" target="_black">
         <img src="https://img.shields.io/static/v1?label=Language&message=Python&color=blue&style=for-the-badge&logo=Python" alt="Language: Python">
     </a> 
-    <a href="#">
+    <a href="https://cookiecutter.readthedocs.io/en/1.7.2/index.html" target="_black">
 		<img src="https://img.shields.io/static/v1?label=Framework&message=Cookiecutter&color=green&style=for-the-badge&logo=Ghost"  alt="Language: Cookiecutter">
 	</a>
     </p>
