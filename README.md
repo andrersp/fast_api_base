@@ -32,7 +32,7 @@
  
 </p>
 
-## 📌 Sobre
+## 📌Sobre
 
 <div>
     <p align="center">
@@ -42,13 +42,13 @@
     </p>
 </div>
 
-## 🚀 Features
+## 🚀Features
 
  <p align="center">
     
 - Criação de um projeto base com alguns endpoints para gerenciamento de usuários.
 
-## 📕 Instalação
+## 📕Instalação
 
 
 **Você deve ter instalado**
@@ -69,7 +69,7 @@ pip install --upgrade cookiecutter
 cookiecutter https://github.com/andrersp/fast_api_base.git
 ```
 
-## 🌐 Tecnologias
+## 🌐Tecnologias
 
 - [Python](https://www.python.org/)
 - [Cookiecutter](https://cookiecutter.readthedocs.io/en/1.7.2/index.html)
