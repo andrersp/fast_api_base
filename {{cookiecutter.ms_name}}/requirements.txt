@@ -1,6 +1,7 @@
-fastapi==0.70.0
+fastapi==0.76.0
 uvicorn[standard]==0.15.0
 python-dotenv==0.14.0
+SQLAlchemy==1.4.35
 gunicorn
 pydantic
 asyncpg==0.24.0
